@@ -2,7 +2,7 @@
 	<nav class="mobile-nav show-on-mobiles">
 		<ul>
 			<li 
-			{% if {{ include.index }} ==1 %}
+			{% if  include.index  ==1 %}
 			class="current"
 			{% else %}
 			class=""
@@ -11,7 +11,7 @@
 				<a href="C:/Users/Eric/Desktop/webtest/layout/home.html">概述</a>
 			</li>
 			<li 
-			{% if {{ include.index }} ==2 %}
+			{% if  include.index  ==2 %}
 			class="current"
 			{% else %}
 			class=""
@@ -20,7 +20,7 @@
 				<a href="C:/Users/Eric/Desktop/webtest/layout/frame.html">文档{{ include.item1 }}</a>
 			</li>
 			<li 
-			{% if {{ include.index }} ==3 %}
+			{% if  include.index  ==3 %}
 			class="current"
 			{% else %}
 			class=""
@@ -45,7 +45,7 @@
 		<nav class="main-nav unit two-thirds hide-on-mobiles">
 			<ul>
 				
-			{% if {{ include.index }} ==1 %}
+			{% if  include.index  ==1 %}
 			<li class="current"><a href="C:/Users/Eric/Desktop/webtest/layout/home.html">概述</a>
 				</li>
 			{% else %}
@@ -55,7 +55,7 @@
 			
 					
 				
-			{% if {{ include.index }} ==2 %}
+			{% if include.index  ==2 %}
 			<li class="current"><a href="C:/Users/Eric/Desktop/webtest/layout/frame.html">文档</a>
 				</li>
 			{% else %}
@@ -65,7 +65,7 @@
 			
 					
 			
-			{% if {{ include.index }} ==3 %}
+			{% if include.index ==3 %}
 			<li class="current"><a href="C:/Users/Eric/Desktop/webtest/layout/news.html">新闻</a>
 				</li>
 			{% else %}

@@ -1,7 +1,7 @@
 <html lang = "zh-CN">
 	<head>
 		<meta charset="UTF-8">
-		<title>WebTest</title>
+		<title>{{ page.title }}</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="{{ site.url }}/Blog/assets/css/screen.css" />
 		<link rel="icon" type="image/png" href="{{ site.url }}/Blog/assets/images/ico.jpg" />
@@ -11,19 +11,13 @@
 		<section class="intro">
 		  <div class="grid">
 			<div class="unit whole center-on-mobiles">
-			  <p class="first">将纯文本转化为静态网站和博客</p>
+			  <p class="first">{{page.abstract}}</p>
 			</div>
 		  </div>
 		</section>
 		<section class="features">
 			<div class="grid">
-				{% for module in page.modules %}
-					<div class="unit one-third">
-						<h2>{{ module.title }}</h2>
-						<p>{{ module.details }}</p>
-						<a href="{{ module.url }}" class="">{{ module.urlText }} &rarr;</a>
-					</div>
-				{% endfor %}
+				{{content}}
 				<div class="clear"></div>
 			</div>
 		</section>

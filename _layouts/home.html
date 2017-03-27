@@ -17,44 +17,13 @@
 		</section>
 		<section class="features">
 			<div class="grid">
-				<div class="unit one-third">
-				  <h2>简单</h2>
-				  <p>
-					无需数据库、评论功能，不需要不断的更新版本——只用关心<em>你的博客内容</em>。
-				  </p>
-				  <a href="/docs/usage/" class="">Jekyll 是如何工作的 &rarr;</a>
-				</div>
-				<div class="unit one-third">
-				  <h2>静态</h2>
-				  <p>只用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> (或 <a href="http://textile.sitemonks.com/">Textile</a>)、<a href="http://wiki.shopify.com/Liquid">Liquid</a>、HTML <span class="amp">&amp;</span> CSS 就可以构建可部署的静态网站。</p>
-				  <a href="/docs/templates/" class="">Jekyll 模版指南 &rarr;</a>
-				</div>
-				<div class="unit one-third">
-				  <h2>博客形态</h2>
-				  <p>
-					自定义地址、分类、页面、博客内容 以及 自定义的布局设计 都是系统中的一等公民。
-				  </p>
-				  <a href="/docs/migrations/" class="">迁移你的博客 &rarr;</a>
-				</div>
-				<div class="unit one-third">
-				  <h2>简单</h2>
-				  <p>
-					无需数据库、评论功能，不需要不断的更新版本——只用关心<em>你的博客内容</em>。
-				  </p>
-				  <a href="/docs/usage/" class="">Jekyll 是如何工作的 &rarr;</a>
-				</div>
-				<div class="unit one-third">
-				  <h2>静态</h2>
-				  <p>只用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> (或 <a href="http://textile.sitemonks.com/">Textile</a>)、<a href="http://wiki.shopify.com/Liquid">Liquid</a>、HTML <span class="amp">&amp;</span> CSS 就可以构建可部署的静态网站。</p>
-				  <a href="/docs/templates/" class="">Jekyll 模版指南 &rarr;</a>
-				</div>
-				<div class="unit one-third">
-				  <h2>博客形态</h2>
-				  <p>
-					自定义地址、分类、页面、博客内容 以及 自定义的布局设计 都是系统中的一等公民。
-				  </p>
-				  <a href="/docs/migrations/" class="">迁移你的博客 &rarr;</a>
-				</div>
+				{% for module in page.modules %}
+					<div class="unit one-third">
+						<h2>{{ module.title }}</h2>
+						<p>{{ module.details }}</p>
+						<a href="{{ module.url }}" class="">{{ module.urlText }} &rarr;</a>
+					</div>
+				{% endfor %}
 				<div class="clear"></div>
 			</div>
 		</section>

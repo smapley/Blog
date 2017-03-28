@@ -4,17 +4,11 @@ title: Eric site
 abstract: A site used to record the growth process of a coder
 modules: [{title: title, details: details,url: url, urlText: urlText},{title: title, details: details,url: url, urlText: urlText},{title: title, details: details,url: url, urlText: urlText}]
 ---
-{% for module in page.modules %}
+{% for post in site.categories.Main %}
 	<div class="unit one-third">
-		<h2>{{ module.title }}</h2>
-		<p>{{ module.details }}</p>
-		<a href="{{ module.url }}" class="">{{ module.urlText }} &rarr;</a>
+		<h2>{{ post.title }}</h2>
+		<p>{{ module.excerpt  }}</p>
+		<a href="{{ site.baseurl }}{{ post.url }}" class="">{{ module.urlText }} &rarr;</a>
 	</div>
 {% endfor %}
-<h2 style="background:#000;color:#fff">{{ page.title }}</h2>
-<p>{{ page.user.name }}{{ page.user.age }}</p>
-<ul>
-　　{% for post in site.categories.CATEGORY %}
-　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ post.message }}</a></li>
-　　{% endfor %}
-</ul>
+

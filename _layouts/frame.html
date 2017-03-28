@@ -68,7 +68,7 @@
 						{% for cateTitle in page.menu %}
 							<h4>{{cateTitle}}</h4>
 							<ul>
-								{% for post in site.categories.Python %}		
+								{% for post in site.categories.{{cateTitle}} %}		
 									{% if page.title == post.title %}
 										<li class="current"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 									{% else %}

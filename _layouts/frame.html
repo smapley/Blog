@@ -68,7 +68,7 @@
 						{% for cateTitle in page.menu %}
 							<h4>{{cateTitle}}</h4>
 							<ul>
-								{% for post in site.categories.cateTitle %}		
+								{% for post in site.categories.{cateTitle} %}		
 									{% if page.title == post.title %}
 										<li class="current"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 									{% else %}
@@ -79,7 +79,7 @@
 						{% endfor %}
 						<h4>开始旅程</h4>
 						<ul>
-							<li class="current"><a href="/docs/home/">欢迎</a></li>
+							<li class="current"><a href="/docs/home/">欢迎1</a></li>
 							<li class=""><a href="/docs/quickstart/">快速指南</a></li>
 							<li class=""><a href="/docs/installation/">安装</a></li>
 							<li class=""><a href="/docs/usage/">基本用法</a></li>

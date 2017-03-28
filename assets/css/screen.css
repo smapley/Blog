@@ -101,7 +101,6 @@
   /* Sometimes, you just want to be different on small screens */
   .center-on-mobiles {
     text-align: center !important;
-	margin-bottom: 0px;
   }
   .hide-on-mobiles {
     display: none !important;
@@ -307,6 +306,9 @@ body > footer a:hover img {
 }
 
 /* Intro */
+.intro {
+	margin: 0;
+}
 
 .intro .unit {
   padding: 10px 0 40px;

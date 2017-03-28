@@ -65,6 +65,18 @@
 
 				<div class="unit one-fifth hide-on-mobiles">
 					<aside>
+						
+						{% for cateTitle in page.cateTitle %}
+							<h4>{{cateTitle}}</h4>
+							<ul>
+								<li class="current"><a href="/docs/home/">欢迎</a></li>
+								<li class=""><a href="/docs/quickstart/">快速指南</a></li>
+								<li class=""><a href="/docs/installation/">安装</a></li>
+								<li class=""><a href="/docs/usage/">基本用法</a></li>
+								<li class=""><a href="/docs/structure/">目录结构</a></li>
+								<li class=""><a href="/docs/configuration/">配置</a></li>
+							</ul>
+						{% endfor %}
 						<h4>开始旅程</h4>
 						<ul>
 							<li class="current"><a href="/docs/home/">欢迎</a></li>

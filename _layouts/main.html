@@ -7,16 +7,8 @@
 		<link rel="icon" type="image/png" href="{{ site.url }}/Blog/assets/images/ico.jpg" />
 	</head>
 	<body class="wrap">
-		{% include header.html selectIndex=1 %}
-		<section class="intro">
-		  <div class="grid">
-			<div class="unit whole center-on-mobiles">
-			  <p class="first">{{page.abstract}}</p>
-			</div>
-		  </div>
-		</section>
+		{% include header.html selectIndex=page.index %}
 		{{content}}
-		
 		{% include footer.html %}
 	</body>
 </html>
